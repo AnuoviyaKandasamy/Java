@@ -7,9 +7,21 @@ public class MinFrogsSolver {
 
         for(char ch: croakOfFrogs.toCharArray()){
             if(ch=='c') {c++; frogs++;}
-            else if(ch=='r') {r++; if(--c < 0) return -1;}
-            else if(ch=='o') {o++; if(--r < 0) return -1;}
-            else if(ch=='a') {a++; if(--o < 0) return -1;}
+            else if(ch=='r') {
+                r++;
+                if(--c < 0) 
+                    return -1;
+            }
+            else if(ch=='o') {
+                o++;
+                if(--r < 0) 
+                    return -1;
+            }
+            else if(ch=='a') {
+                a++; 
+                if(--o < 0)
+                    return -1;
+            }
             else if(ch=='k') {
                 k++;
                 if(--a < 0) return -1;
